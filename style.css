@@ -1,0 +1,1077 @@
+body, * {
+  margin: 0 ;
+  padding: 0 ;
+  border: 0 ;
+  box-sizing: border-box;
+}
+
+/*html, body {
+    height: 100%;
+}*/
+body {
+  overflow-y: hidden;
+}
+
+@font-face {
+    font-family: "Suisse Int'l Semi Bold";
+    src:url('SuisseIntl-SemiBold.otf') format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Suisse Int'l Regular";
+    src:url('SuisseIntl-Regular.otf') format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.homeicon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  height: 40px;
+  width: auto;
+  z-index: 5;
+  opacity: 0.1;
+}
+
+.circle-container {
+    position: absolute;
+    top: 50%;
+    margin-top: -300px;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    height: 600px;
+    /*padding: 2.8em;*/
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    /*border: dashed 1px;*/
+    border-radius: 300px;
+    /*margin: 1.75em auto 0;*/
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+}
+
+.circle-container img {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  transition: transform .4s ease-in-out;
+}
+
+.deg0 { transform: translate(300px); } /* 250px = half the width of the wrapper */
+.deg40 { transform: rotate(40deg) translate(300px) rotate(-40deg); }
+.deg80 { transform: rotate(80deg) translate(300px) rotate(-80deg); }
+.deg120 { transform: rotate(120deg) translate(300px) rotate(-120deg); }
+.deg160 { transform: rotate(160deg) translate(300px) rotate(-160deg); }
+.deg200 { transform: rotate(200deg) translate(300px) rotate(-200deg); }
+.deg240 { transform: rotate(240deg) translate(300px) rotate(-240deg); }
+.deg280 { transform: rotate(280deg) translate(300px) rotate(-280deg); }
+.deg320 { transform: rotate(320deg) translate(300px) rotate(-320deg); }
+
+.circle-container img:hover {
+  opacity: 1;
+  transition: 0.4s;
+  transform: rotate(20deg);
+}
+
+.nomove {
+  transform: none !important;
+  position: absolute;
+  height: auto;
+  width: 200px;
+}
+
+.icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 50px;
+  margin-left: -40px;
+  z-index: 5;
+}
+
+.eyechart {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+  opacity: 0.7;
+}
+
+.bar1 {
+  position: absolute;
+  width: 75%;
+  height: 1000px;
+  background-color: #523A20;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar2 {
+  position: absolute;
+  width: 11%;
+  height: 1000px;
+  background-color: #8F682D;
+  top: 60%;
+  left: 75%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar3 {
+  position: absolute;
+  width: 9%;
+  height: 1000px;
+  background-color: #CBA04B;
+  top: 60%;
+  left: 86%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar4 {
+  position: absolute;
+  width: 4%;
+  height: 1000px;
+  background-color: #D6B787;
+  top: 60%;
+  left: 95%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar5 {
+  position: absolute;
+  width: 1%;
+  height: 1000px;
+  background-color: #87BE33;
+  top: 60%;
+  left: 99%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover, .bar4:hover, .bar5:hover{
+  top: 50%;
+}
+
+.bar1:hover ~ .chancetype {
+  opacity:1;
+}
+
+.bar2:hover ~ .chancetype2 {
+  opacity:1;
+}
+
+.bar3:hover ~ .chancetype3 {
+  opacity:1;
+}
+
+.bar4:hover ~ .chancetype4 {
+  opacity:1;
+}
+
+.bar5:hover ~ .chancetype5 {
+  opacity:1;
+}
+
+.chancetype {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -243px;
+  color: #523A20;
+  font-size: 40pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.chancetype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -239px;
+  color: #8F682D;
+  font-size: 40pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.chancetype3 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -216px;
+  color: #CBA04B;
+  font-size: 40pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.chancetype4 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -235.5px;
+  color: #D6B787;
+  font-size: 40pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.chancetype5 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -135px;
+  color: #87BE33;
+  font-size: 40pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.eyebackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #F34135;
+}
+
+.dnabackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #36BEEB;
+}
+
+.languagebackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #34A1EC;
+}
+
+.eyetype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #F34135;
+  font-size: 20pt;
+  position: absolute;
+  top: 3px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 72px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.dnatype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #36BEEB;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.map {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  height: 250px;
+  margin-left: -256.5px;
+  width: auto;
+}
+
+.dnabar1 {
+  position: absolute;
+  width: 97.2%;
+  height: 1000px;
+  background-color: #E7310E;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.dnabar2 {
+  position: absolute;
+  width: 2.5%;
+  height: 1000px;
+  background-color: #FFBA32;
+  top: 60%;
+  left: 97.2%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.dnabar3 {
+  position: absolute;
+  width: 0.2%;
+  height: 1000px;
+  background-color: #D02E10;
+  top: 60%;
+  left: 99.7%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.dnabar4 {
+  position: absolute;
+  width: 0.1%;
+  height: 1000px;
+  background-color: #8C0E45;
+  top: 60%;
+  left: 99.9%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.dnabar1:hover, .dnabar2:hover, .dnabar3:hover, .dnabar4:hover, .dnabar5:hover{
+  top: 50%;
+}
+
+.dnabar1:hover ~ .dnatype1 {
+  opacity:1;
+}
+
+.dnabar2:hover ~ .dnatype2 {
+  opacity:1;
+}
+
+.dnabar3:hover ~ .dnatype3 {
+  opacity:1;
+}
+
+.dnabar4:hover ~ .dnatype4 {
+  opacity:1;
+}
+
+
+.dnatype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -280px;
+  color: #E7310E;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.dnatype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -240px;
+  color: #FFBA32;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.dnatype3 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -470px;
+  color: #D12F11;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.dnatype4 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -287px;
+  color: #8C0E45;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.languagebar1 {
+  position: absolute;
+  width: 60%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 30%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagebar2 {
+  position: absolute;
+  width: 60%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 40%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagebar3 {
+  position: absolute;
+  width: 60%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 50%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagebar4 {
+  position: absolute;
+  width: 45%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 60%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagebar5 {
+  position: absolute;
+  width: 20%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 70%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagebar6 {
+  position: absolute;
+  width: 20%;
+  height: 30px;
+  background-color: #34A1EC;
+  top: 80%;
+  left: 350px;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.languagetype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 30%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 40%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype3 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype4 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 60%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype5 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 70%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.languagetype6 {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #34A1EC;
+  font-size: 20pt;
+  position: absolute;
+  top: 80%;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.tonguebackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #F78F35;
+}
+
+.tonguetype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #F78F35;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.tongueinfo {
+  font-family: "Suisse Int'l Regular";
+  color: #F78F35;
+  font-size: 15pt;
+  position: absolute;
+  top: 25%;
+  left: 200px;
+  margin-right: 200px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.tonguebar1 {
+  position: absolute;
+  width: 58%;
+  height: 1000px;
+  background-color: #f7a55d;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.tonguebar2 {
+  position: absolute;
+  width: 42%;
+  height: 1000px;
+  background-color: #faba82;
+  top: 60%;
+  left: 58%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.tonguebar1:hover, .tonguebar2:hover{
+  top: 55%;
+}
+
+.tonguebar1:hover ~ .tonguetype1 {
+  opacity:1;
+}
+
+.tonguebar2:hover ~ .tonguetype2 {
+  opacity:1;
+}
+
+.tonguetype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -158.5px;
+  color: #f7a55d;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.tonguetype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -173px;
+  color: #faba82;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nosebackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #FCBE36;
+}
+
+.nosetype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #FCBE36;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.noseinfo {
+  font-family: "Suisse Int'l Regular";
+  color: #FCBE36;
+  font-size: 15pt;
+  position: absolute;
+  top: 25%;
+  left: 200px;
+  margin-right: 200px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.nosetype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -163.5px;
+  color: #fcc958;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nosetype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -174px;
+  color: #fbd37a;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nosebar1 {
+  position: absolute;
+  width: 59%;
+  height: 1000px;
+  background-color: #fcc958;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.nosebar2 {
+  position: absolute;
+  width: 41%;
+  height: 1000px;
+  background-color: #fbd37a;
+  top: 60%;
+  left: 59%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.nosebar1:hover, .nosebar2:hover{
+  top: 55%;
+}
+
+.nosebar1:hover ~ .nosetype1 {
+  opacity:1;
+}
+
+.nosebar2:hover ~ .nosetype2 {
+  opacity:1;
+}
+
+.hairbackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #FACF36;
+}
+
+.hairtype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #FACF36;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.hairinfo {
+  font-family: "Suisse Int'l Regular";
+  color: #FACF36;
+  font-size: 15pt;
+  position: absolute;
+  top: 25%;
+  left: 200px;
+  margin-right: 200px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.hairtype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -185px;
+  color: #f9d34e;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.hairtype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -150px;
+  color: #f6da76;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.hairbar1 {
+  position: absolute;
+  width: 81%;
+  height: 1000px;
+  background-color: #f9d34e;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.hairbar2 {
+  position: absolute;
+  width: 19%;
+  height: 1000px;
+  background-color: #f6da76;
+  top: 60%;
+  left: 81%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.hairbar1:hover, .hairbar2:hover{
+  top: 50%;
+}
+
+.hairbar1:hover ~ .hairtype1 {
+  opacity:1;
+}
+
+.hairbar2:hover ~ .hairtype2 {
+  opacity:1;
+}
+
+.faceinfo {
+  font-family: "Suisse Int'l Regular";
+  color: #CCEE35;
+  font-size: 15pt;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -368px;
+  letter-spacing: 0.5px;
+}
+
+.facebar1 {
+  position: absolute;
+  width: 85%;
+  height: 1000px;
+  background-color: #d3e056;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.facebar2 {
+  position: absolute;
+  width: 15%;
+  height: 1000px;
+  background-color: #e1e781;
+  top: 60%;
+  left: 85%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.facebar1:hover, .facebar2:hover{
+  top: 50%;
+}
+
+.facebar1:hover ~ .facetype1 {
+  opacity:1;
+}
+
+.facebar2:hover ~ .facetype2 {
+  opacity:1;
+}
+
+.facetype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -166px;
+  color: #d3e056;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.facetype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -196px;
+  color: #89d0ca;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.facebackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #CCEE35;
+}
+
+.facetype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #CCEE35;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.skinbar1 {
+  position: absolute;
+  width: 58%;
+  height: 1000px;
+  background-color: #73cabf;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.skinbar2 {
+  position: absolute;
+  width: 42%;
+  height: 1000px;
+  background-color: #89d0ca;
+  top: 60%;
+  left: 58%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.skinbar1:hover, .skinbar2:hover{
+  top: 50%;
+}
+
+.skinbar1:hover ~ .skintype1 {
+  opacity:1;
+}
+
+.skinbar2:hover ~ .skintype2 {
+  opacity:1;
+}
+
+.skintype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -183px;
+  color: #73cabf;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.skintype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -181.5px;
+  color: #33DFC3;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.skininfo {
+  font-family: "Suisse Int'l Regular";
+  color: #CCEE35;
+  font-size: 15pt;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -368px;
+  letter-spacing: 0.5px;
+}
+
+.skintype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #33DFC3;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.skinbackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #33DFC3;
+}
+
+.sunbackground {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #53E335;
+}
+
+.suntype {
+  font-family: "Suisse Int'l Semi Bold";
+  color: #53E335;
+  font-size: 20pt;
+  position: absolute;
+  top: 40px;
+  left: 110px;
+  letter-spacing: 0.5px;
+}
+
+.sunbar1 {
+  position: absolute;
+  width: 63%;
+  height: 1000px;
+  background-color: #82c448;
+  top: 60%;
+  left: 0%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.sunbar2 {
+  position: absolute;
+  width: 37%;
+  height: 1000px;
+  background-color: #93ca65;
+  top: 60%;
+  left: 63%;
+  transition: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.suntype1 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -286px;
+  color: #82C448;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.suntype2 {
+  font-family: "Suisse Int'l Semi Bold";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -320px;
+  color: #93CA65;
+  font-size: 30pt;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.sunbar1:hover, .sunbar2:hover{
+  top: 55%;
+}
+
+.sunbar1:hover ~ .suntype1 {
+  opacity:1;
+}
+
+.sunbar2:hover ~ .suntype2 {
+  opacity:1;
+}
