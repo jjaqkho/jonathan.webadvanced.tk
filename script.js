@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $('body').css('display', 'none');
   $('body').fadeIn(20);
-  $('.invert').click(
+  $('.invert, .homeicon').click(
     function() {
       event.preventDefault();
       newLocation = this.href;
