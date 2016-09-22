@@ -17,8 +17,8 @@ var timer = 0;
 var counter = 0;
 var numbers = [];
 
-for (var x=0;x<100;x++) {
-    numbers.push(x);
+for (var x = 0; x < 100; x++) {
+  numbers.push(x);
 }
 
 console.log(numbers);
@@ -34,22 +34,22 @@ console.log(numbers);
 // }
 
 
-for (var i=0; i<100; i++) {
-    setTimeout(function() {
-var snow = "";
-for (var s=0; s<40; s++) {
-    if (Math.random()*100<30) {
+for (var i = 0; i < 500; i++) {
+  setTimeout(function() {
+    var snow = "";
+    for (var s = 0; s < 40; s++) {
+      if (Math.random() * 100 < 40) {
         snow += "火";
-    } else if (Math.random()*100<50) {
+      } else if (Math.random() * 100 < 60) {
         snow += "炎";
-    } else if (Math.random()*100<70) {
+      } else if (Math.random() * 100 < 80) {
         snow += "焱";
+      }
     }
-}
-console.log(snow);
-    }, timer);
-    timer += 40;
-    counter++;
+    console.log(snow);
+  }, timer);
+  timer += 40;
+  counter++;
 }
 
 
@@ -58,16 +58,6 @@ console.log(snow);
 // setTimeout(function() {
 //     console.log("hey");
 // }, (Math.random()*5000));
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -92,22 +82,11 @@ console.log(snow);
 
 
 
-
-
-
-
 // always true and never false so it keeps looping
 // while (i<10) {
 //     console.log(Math.floor(Math.random()*10));
 //     i++;
 // }
-
-
-
-
-
-
-
 
 
 
@@ -123,8 +102,6 @@ console.log(snow);
 
 
 
-
-
 // if (user == "brendan" && password == "letmein") {
 //     console.log("you made it...");
 // } else if (user == "Brendan") {
@@ -134,8 +111,3 @@ console.log(snow);
 //     } else {
 //         console.log("Wrong username");
 // }
-
-
-
-
-
