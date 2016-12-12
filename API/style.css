@@ -1,0 +1,177 @@
+body, * {
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "SuisseIntl-SemiBold";
+    src:url('SuisseIntl-SemiBold.otf') format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.firstcolumn {
+  position: absolute;
+  left: 0;
+  width: 33.33%;
+  height: 100%;
+  /*background-color: white;*/
+}
+
+.DE {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 400px;
+  left: 10%;
+  /*margin-left: -132px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.ES {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 500px;
+  left: 10%;
+  /*margin-left: -126.89px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.FR {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 600px;
+  left: 10%;
+  /*margin-left: -135.76px;*/
+  font-size: 50pt;
+  opacity: 0.3 ;
+}
+
+.secondcolumn {
+  position: absolute;
+  left: 33.33%;
+  width: 33.33%;
+  height: 100%;
+  /*background-color: white;*/
+}
+
+.UR {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 400px;
+  left: 40%;
+  /*margin-left: -53.165px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.FA {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 500px;
+  left: 40%;
+  /*margin-left: -90px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.AR {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 600px;
+  left: 40%;
+  /*margin-left: -61.5px;*/
+  font-size: 50pt;
+  opacity: 0.3 ;
+}
+
+.thirdcolumn {
+  position: absolute;
+  left: 66.66%;
+  width: 33.33%;
+  height: 100%;
+  /*background-color: white;*/
+}
+
+.RU {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 400px;
+  left: 65%;
+  /*margin-left: -138px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.KZ {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 500px;
+  left: 65%;
+  /*margin-left: -99px;*/
+  font-size: 50pt;
+  opacity: 0.3;
+}
+
+.PO {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 600px;
+  left: 65%;
+  /*margin-left: -113.5px;*/
+  font-size: 50pt;
+  opacity: 0.3 ;
+}
+
+.show:hover {
+opacity: 1;
+transition: ease-in-out 0.3s;
+cursor: pointer;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.instruction {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  margin-left: -109.625px;
+  font-size: 15pt;
+  opacity: 1;
+}
+
+.line {
+  position: absolute;
+  height: 5px;
+  width: 400px;
+  top: 250px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: black;
+  z-index: 1000;
+}
+
+input {
+  z-index: 100;
+  font-size: 50pt;
+  position: absolute;
+  top: 153px;
+  left: 50%;
+  margin-left: -375px;
+  opacity: 1;
+  text-align: center;
+  font-family: "SuisseIntl-SemiBold";
+}
+
+input:focus {
+  text-decoration: none;
+  border: none;
+  outline-width: 0;
+}
