@@ -35,6 +35,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
        responsiveVoice.speak($(".AR").html(), "Arabic Male", {rate: 1.2});
   //  }
 });
+
+  $( ".AR" ).mouseout(function() {
+  // if (!$(".AR").hasClass("strike")) {
+       responsiveVoice.cancel();
+  //  }
+  });
 } else {
   $(".AR").html("عربي");
 }
@@ -77,6 +83,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
       responsiveVoice.speak($(".DE").html(), "Deutsch Female", {rate: 1.2});
  //  }
 });
+
+$( ".DE" ).mouseout(function() {
+// if (!$(".AR").hasClass("strike")) {
+     responsiveVoice.cancel();
+//  }
+});
  } else {
    $(".DE").html("Deutsch");
  }
@@ -118,6 +130,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
        responsiveVoice.speak($(".FA").html(), "Arabic Male", {rate: 1.2});
   //  }
  });
+
+ $( ".FA" ).mouseout(function() {
+ // if (!$(".AR").hasClass("strike")) {
+      responsiveVoice.cancel();
+ //  }
+ });
   } else {
     $(".FA").html("فارسى");
   }
@@ -156,6 +174,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
   // if (!$(".AR").hasClass("strike")) {
         responsiveVoice.speak($(".RU").html(), "Russian Female", {rate: 1.2});
    //  }
+
+   $( ".RU" ).mouseout(function() {
+   // if (!$(".AR").hasClass("strike")) {
+        responsiveVoice.cancel();
+   //  }
+   });
   });
    } else {
      $(".RU").html("Pусский");
@@ -195,6 +219,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
    // if (!$(".AR").hasClass("strike")) {
          responsiveVoice.speak($(".KZ").html(), "Russian Female", {rate: 1.2});
     //  }
+
+    $( ".KZ" ).mouseout(function() {
+    // if (!$(".AR").hasClass("strike")) {
+         responsiveVoice.cancel();
+    //  }
+    });
    });
     } else {
       $(".KZ").html("Қазақ");
@@ -235,6 +265,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
           responsiveVoice.speak($(".PO").html(), "Polish Female", {rate: 1.2});
      //  }
     });
+
+    $( ".PO" ).mouseout(function() {
+    // if (!$(".AR").hasClass("strike")) {
+         responsiveVoice.cancel();
+    //  }
+    });
      } else {
        $(".PO").html("Polskie");
      }
@@ -273,6 +309,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
      // if (!$(".AR").hasClass("strike")) {
            responsiveVoice.speak($(".UR").html(), "Arabic Male", {rate: 1.2});
       //  }
+     });
+
+     $( ".UR" ).mouseout(function() {
+     // if (!$(".AR").hasClass("strike")) {
+          responsiveVoice.cancel();
+     //  }
      });
       } else {
         $(".UR").html("اردو");
@@ -313,6 +355,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
             responsiveVoice.speak($(".ES").html(), "Spanish Female", {rate: 1.2});
        //  }
       });
+
+      $( ".ES" ).mouseout(function() {
+      // if (!$(".AR").hasClass("strike")) {
+           responsiveVoice.cancel();
+      //  }
+      });
        } else {
          $(".ES").html("Español");
        }
@@ -351,6 +399,12 @@ $(".AR").html(response.result.data.translations[0].translatedText);
        // if (!$(".AR").hasClass("strike")) {
              responsiveVoice.speak($(".FR").html(), "French Female", {rate: 1.2});
         //  }
+       });
+
+       $( ".FR" ).mouseout(function() {
+       // if (!$(".AR").hasClass("strike")) {
+            responsiveVoice.cancel();
+       //  }
        });
         } else {
           $(".FR").html("Français");
