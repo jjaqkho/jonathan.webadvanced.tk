@@ -21,11 +21,23 @@ box-sizing: border-box;
   /*background-color: white;*/
 }
 
+.toprow {
+    transition: ease-in-out 0.2s;
+}
+
+.midrow {
+    transition: ease-in-out 0.2s;
+}
+
+.lastrow {
+    transition: ease-in-out 0.2s;
+}
+
 .DE {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 400px;
   left: 10%;
+  top: 400px;
   /*margin-left: -132px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -34,8 +46,8 @@ box-sizing: border-box;
 .ES {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 500px;
   left: 10%;
+      top: 500px;
   /*margin-left: -126.89px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -44,8 +56,8 @@ box-sizing: border-box;
 .FR {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 600px;
   left: 10%;
+      top: 600px;
   /*margin-left: -135.76px;*/
   font-size: 50pt;
   opacity: 0.3 ;
@@ -62,8 +74,8 @@ box-sizing: border-box;
 .UR {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 400px;
   left: 40%;
+    top: 400px;
   /*margin-left: -53.165px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -72,8 +84,8 @@ box-sizing: border-box;
 .FA {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 500px;
   left: 40%;
+      top: 500px;
   /*margin-left: -90px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -82,8 +94,8 @@ box-sizing: border-box;
 .AR {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 600px;
   left: 40%;
+      top: 600px;
   /*margin-left: -61.5px;*/
   font-size: 50pt;
   opacity: 0.3 ;
@@ -100,8 +112,8 @@ box-sizing: border-box;
 .RU {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 400px;
   left: 65%;
+    top: 400px;
   /*margin-left: -138px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -110,8 +122,8 @@ box-sizing: border-box;
 .KZ {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 500px;
   left: 65%;
+      top: 500px;
   /*margin-left: -99px;*/
   font-size: 50pt;
   opacity: 0.3;
@@ -120,8 +132,8 @@ box-sizing: border-box;
 .PO {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
-  top: 600px;
   left: 65%;
+      top: 600px;
   /*margin-left: -113.5px;*/
   font-size: 50pt;
   opacity: 0.3 ;
@@ -137,6 +149,17 @@ cursor: pointer;
   text-decoration: line-through;
 }
 
+.instruction2 {
+  font-family: "SuisseIntl-SemiBold";
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  margin-left: -73.3px;
+  font-size: 15pt;
+  opacity: 0;
+  transition: ease-in-out 0.4s;
+}
+
 .instruction {
   font-family: "SuisseIntl-SemiBold";
   position: absolute;
@@ -145,6 +168,7 @@ cursor: pointer;
   margin-left: -109.625px;
   font-size: 15pt;
   opacity: 1;
+  transition: ease-in-out 0.4s;
 }
 
 .line {

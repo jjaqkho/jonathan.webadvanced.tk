@@ -418,3 +418,44 @@ $( ".DE" ).mouseout(function() {
 
          })
          .keyup();
+
+
+        //  MOVE WHEN SPACEBAR HELD
+         var $topElements = $('.DE, .UR, .RU');
+         var $bottomElements = $('.FR, .AR, .PO');
+
+         $(document).keydown(function(e) {
+             switch (e.which) {
+             case 32 :
+
+                  $topElements.css('top', "500px");
+
+                 $bottomElements.css('top', "500px");
+                 break;
+             }
+         })
+
+         $(document).keyup(function(e) {
+             switch (e.which) {
+             case 32 :
+
+                  $topElements.css('top', "400px");
+
+                 $bottomElements.css('top', "600px");
+                 break;
+             }
+         })
+
+         $(".syllables").keyup(function() {
+             var value = $(this).val();
+
+             if (value !== "") {
+             $(".instruction").css("opacity", "0");
+             $(".instruction2").css("opacity", "1");
+           } else {
+             $(".instruction").css("opacity", "1");
+             $(".instruction2").css("opacity", "0");
+           }
+
+          })
+          .keyup();
